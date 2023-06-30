@@ -1,0 +1,369 @@
+@import "variables";
+@mixin decoration {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+*{
+    margin: 0px;
+    padding: 0px; 
+}
+
+body{
+    background: linear-gradient(#13b270, rgb(65, 66, 159));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER*/
+
+
+header{ 
+    .navbar-brand{
+    color: #8b34a3;
+    font-family:Impact;
+    font-size: 400%;
+    text-decoration: none;}
+    a{
+    text-decoration: none;
+    }
+} 
+
+
+
+/*INICIO*/
+
+.inicio{
+    width: $dimensiones; 
+    margin: 20px auto;
+    justify-content: center;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows:auto;
+    .titulo{
+        text-align: center;
+        font-family: $f-family;
+        color: #ffffff;
+        font-size: 2rem;
+    }
+}
+  
+.imag .imagen-inicio{
+    width: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    
+}
+#sub-title{
+    text-align: center;
+    font-family: $f-family;
+    color: #ffffff;
+    font-size: $fuente;
+}
+.texto{
+    text-align: center;
+    font-family: $f-family;
+    color: #c2ba1c;
+    font-size: $fuente;
+}
+.juegos .juegos-descripcion{
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction:wrap;
+}
+.informacion2{
+    text-align: center;
+    font-family:$f-family;
+    color: #c2ba1c;
+    font-size: $fuente;
+}
+
+/*MI CUENTA*/
+
+.registro{
+    box-sizing: border-box;
+    width: 450px;
+    background:#168fb8 ;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 7px;
+    font-family:$f-family;
+    color: white;
+    box-shadow: 7px 15px 30px #000000; 
+    h4{
+        font-size: 25px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    p{
+        height: 20px;
+        text-align: center;
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        @include decoration;
+    }   
+}
+
+@media (max-width:450px){
+    .registro{
+        width:$dimensiones;
+        margin: auto;
+        margin-top: 50px;    
+        }         
+}
+        
+
+
+.datos{
+    width: $dimensiones;
+    background: #fcfcfc;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    border:2px solid #000000;
+    font-family: $f-family;
+    font-size: $fuente;
+    color: white;
+}
+
+
+.boton{
+  width: $dimensiones;
+  background: #058b2b;
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  font-family: $f-family;
+  font-size: 15px;
+}
+
+
+/*CONTACTO*/
+
+.contac{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background: none;
+    margin-top: 10px;
+   padding: 10px;
+}
+
+p.text{
+    color: #e5a802;
+    text-align: center;
+    font-family: $f-family;
+    font-size: 15px;
+}
+
+section{
+    box-sizing: border-box;
+    width: 350px;
+    background:#168fb8 ;
+    padding: 30px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    font-family:$f-family;
+    color: white;
+    box-shadow: 7px 15px 30px #8d2121;
+    h3{
+        text-align: center;
+        color: #ffffff;
+        font-family: 'Gill Sans';
+        font-size: 25px;
+    }
+    @media (max-width:450px){
+        section{
+            width: auto;
+    
+        }
+    }
+}
+
+
+p.nombre{
+    text-align: center;
+    color: #000000;
+    font-family: $f-family;
+    padding-top: 15px;
+    padding-bottom: 3px;
+}
+
+.info{
+    width: $dimensiones;
+   text-align: center;
+   padding: 5px;
+   color: #6207ff;
+   font-family:inherit;
+   font-size: 15px;
+}
+
+
+input.bot{
+    @extend .boton;
+}
+
+select{
+    width: 275px;
+    text-align: center;
+    padding: 5px;
+    color: #6207ff;
+    font-family:inherit;
+    font-size: 17px;
+}
+    
+/*PRODUCTOS*/
+
+.product{
+    align-items: center;
+    text-align: center;
+    width: $dimensiones;
+    height: auto;
+    display: grid;
+    grid-template-rows: auto;
+    .catalogo{
+        padding: 10px;
+        width: $dimensiones;
+        justify-content: center;  
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+}
+
+@media (max-width: 1000px){
+    .product .catalogo{
+        display: flex;
+      flex-wrap: wrap;
+    }
+}
+
+.img{
+    padding: 10px;
+}
+@media (max-width: 450px){
+    .img{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+
+.product-title{
+    padding: 15px;
+    width: $dimensiones;
+    text-align: center;
+    color: #f7f7f7;
+    font-family: $f-family;
+    font-size: 25px;
+}
+
+.bot button{
+    background: #058b2b;
+    padding: 10px;
+    border: 2px solid rgb(32, 15, 15);
+    border-radius: 7px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 18px;
+    font-family: $f-family;
+}
+
+
+
+/*SOBRE NOSOTROS*/
+
+.nostros{
+    display: grid;
+    grid-template-columns: auto;
+    min-width: 500px;
+}
+.acerca-nosotros{
+    width: $dimensiones;
+    text-align: center;
+    color: #f7f7f7;
+    font-size: $fuente;
+    font-family: $f-family;
+    padding: 10px;
+    margin: 10px; 
+}
+
+.nos{
+    width: $dimensiones;
+    text-align: center;
+    padding: 10px;
+    p{
+        width: $dimensiones;
+        font-size: 20px;
+        color: #e8c100;
+        font-family: 'Trebuchet MS';
+    }
+}
+
+@media (max-width:450px){
+    .nosotros-imagen{
+        width: 300px;
+        height: 250px;
+    }
+}
+
+
+.conocenos{
+    width: $dimensiones;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.conocenos-contacto{
+    margin: 15px;
+    text-align: center;
+    color: azure;
+    font-size: 18px;
+    font-family:$f-family;
+}
+
+.conocenos-contacto-boton{
+    @extend .boton;
+    background: #058b2b;
+    font-size: 17px;
+    border: 2px solid #1e54b2;
+    border-radius: 7px;S
+    a{
+        @include decoration;
+    }
+    a:hover{
+        color: #002ee8;
+    }
+}
+/*pagina de mensaje de agradecimiento*/
+.mensaje{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .mensaje-agradecimiento{
+        color: #e5a802;
+        font-size: 1.5rem;
+        font-family: $f-family;
+    }
+}
+/* FOOTER*/
+
+div p a{
+    @include decoration;
+}
