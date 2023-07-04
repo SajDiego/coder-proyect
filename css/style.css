@@ -306,17 +306,18 @@ select {
 }
 
 .conocenos-contacto-boton {
+  width: 30%;
   background: #058b2b;
   font-size: 17px;
   border: 2px solid #1e54b2;
   border-radius: 7px;
 }
-.conocenos-contacto-boton S a {
+.conocenos-contacto-boton a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
 .conocenos-contacto-boton a:hover {
-  color: #002ee8;
+  color: #ffffff;
 }
 
 /*pagina de mensaje de agradecimiento*/
